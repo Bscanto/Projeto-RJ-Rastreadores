@@ -1,0 +1,22 @@
+.hero {
+  background: linear-gradient(to right,  var(--cor-p3) 40%, rgba(45, 114, 183, 0.3));
+  height: 500px;
+  color: var(--cor-0);
+}
+
+.hero-content {
+  width: 860px;
+  margin: auto;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+}

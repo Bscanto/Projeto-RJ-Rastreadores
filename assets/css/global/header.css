@@ -36,7 +36,7 @@
 
 .header-menu a:hover::after,
 .header-menu a.ativo::after {
-  width: 100%;
+  width: 30%;
 }
 
 .botao a {

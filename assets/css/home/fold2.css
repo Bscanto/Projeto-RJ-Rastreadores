@@ -1,0 +1,33 @@
+.fold2 {
+  background: var(--cor-04);
+  color: white;
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.fold2-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.fold2-content p {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .fold2-content h1 {
+    font-size: 48px;
+  }
+  .fold2-content p {
+    font-size: 24px;
+  }
+  
+}

@@ -11,6 +11,8 @@
 
 
 /* Home */
-@import ".//home/gestao.css";
+@import "./home/hero.css";
+@import "./home/fold2.css";
+@import "./home/fold3.css";
 
 

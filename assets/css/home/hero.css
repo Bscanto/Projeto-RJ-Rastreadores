@@ -3,6 +3,7 @@
   background: var(--cor-p3);
   height: 500px;
   color: var(--cor-0);
+  min-width: 600px;
 }
 
 .hero-content {
@@ -40,7 +41,6 @@
   position: absolute;
   top: 0;
   right: 0;
-  object-fit: cover;
   mask-image: linear-gradient(to right, transparent 0%, var(--cor-p3) 100%);
 }
 

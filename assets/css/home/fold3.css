@@ -1,0 +1,318 @@
+.fold3 {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-0);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fold3 .image-container {
+  flex-shrink: 0;
+  margin-right: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fold3 .image-container img {
+  display: block;
+  max-width: 660px;
+  height: 900px;
+}
+
+.fold3 .text-container {
+  flex-grow: 1;
+  width: 440px;
+  height: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.fold3 h1 {
+  color: var(--cor-p3);
+  margin-bottom: 10px;
+  font-size: 64px;
+  margin-bottom: 40px;
+}
+
+.fold3 p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 32px;
+  color: var(--cor-09);
+  line-height: 32px;
+  margin-bottom: 40px;
+}
+
+.fold3 .features-list {
+  max-width: 800px;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fold3 .feature-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--cor-5);
+  /* position: relative;  */
+  flex-direction: column; /* Mudamos para coluna para empilhar o conteúdo */
+  align-items: flex-start; /* Alinha o texto à esquerda */
+}
+
+.fold3 .feature-item > div { /* Envolve o título e o botão */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ocupa a largura total do item */
+}
+
+.fold3 .feature-item:last-child {
+  border-bottom: none;
+}
+
+.fold3 .expand-button {
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  margin-left: 15px;
+}
+
+.fold3 .expand-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.fold3 .expand-button img {
+  max-width: 100%;
+  height: auto;
+  width: 30px;
+  height: 30px;
+}
+
+.fold3 .expand-button:hover {
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+
+.feature-description {
+  display: none; 
+}
+
+.expanded-description {
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 16px;
+  color: var(--cor-08);
+  line-height: 1.5;
+  border: 1px solid var(--cor-p1);
+  border-radius: 10px;
+  width: 100%; /* Ocupa a largura total do item da lista */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.fold3 .free-trial-button {
+  margin-top: 40px;
+}
+
+.fold3 .free-trial-button:hover {
+  background-color: var(--cor-p5);
+}
+
+.feature-item.active .expanded-description {
+  display: block;
+}
+
+.fold3 .free-trial-button {
+  margin-top: 40px;
+}
+
+.fold3 .free-trial-button:hover {
+  background-color: var(--cor-p5); /* Cor verde mais escura no hover */
+}
+
+/* Media queries para responsividade */
+
+/* Para telas com largura máxima de 1400px */
+@media (max-width: 1300px) {
+  .fold3 {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .fold3 .image-container {
+    margin-right: 15px;
+  }
+
+  .fold3 .image-container img {
+    max-width: 500px;
+  }
+
+  .fold3 .features-list {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .fold3 .feature-item {
+    margin-bottom: 12px;
+    padding: 8px 0;
+  }
+
+  .fold3 .free-trial-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+  }
+}
+
+/* Para telas com largura máxima de 1200px */
+@media (max-width: 1200px) {
+  .fold3 .image-container img {
+    max-width: 400px;
+    height: 700px;
+  }
+
+  .fold3 .text-container {
+    max-width: 100%;
+    height: 700px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .fold3 h1 {
+    margin-top: 40px;
+    font-size: 48px;
+  }
+
+  .fold3 p {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .fold3 .free-trial-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .fold3 .feature-item {
+    font-size: 18px;
+  }
+}
+
+/* Para telas com largura máxima de 800px */
+@media (max-width: 900px) {
+  .fold3 {
+    flex-direction: column; /* Empilha imagem e texto */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .fold3 .image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .fold3 .image-container img {
+    max-width: 100%;
+    display: block;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .fold3 h1 {
+    max-width: 606px;
+    font-size: 40px;
+  }
+
+  .fold3 p {
+    max-width: 700px;
+  }
+
+  .fold3 .features-list {
+    margin-bottom: 20px;
+  }
+
+  .fold3 .feature-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .fold3 .feature-item a span {
+    flex-wrap: nowrap;
+  }
+
+  .fold3 .feature-item span {
+    margin-bottom: 5px;
+  }
+
+  .fold3 .expand-button {
+    margin-top: 5px;
+  }
+
+  .fold3 .free-trial-button {
+    margin-bottom: 80px;
+  }
+}
+
+/* Para telas com largura máxima de 600px (e menores) */
+@media (max-width: 700px) {
+  .fold3 {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .fold3 .image-container {
+    max-width: 95%;
+  }
+
+  .fold3 p {
+    max-width: 400px;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .fold3 .features-list {
+    max-width: 450px;
+  }
+
+  .fold3 .feature-item {
+    padding: 6px 0;
+  }
+
+  .fold3 .free-trial-button {
+    font-size: 0.9em;
+    padding: 10px 18px;
+  }
+}
+
+/* Para telas com largura máxima de 400px */
+@media (max-width: 400px) {
+  .fold3 h1 {
+    font-size: 32px;
+  }
+
+  .fold3 p {
+    font-size: 0.85em;
+  }
+
+  .fold3 .features-list {
+    max-width: 300px;
+  }
+
+  .fold3 .free-trial-button {
+    font-size: 0.8em;
+    padding: 8px 15px;
+  }
+}

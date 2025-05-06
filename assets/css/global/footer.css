@@ -70,7 +70,7 @@
   padding: 0;
 }
 
-.rodape-coluna-informacoes li {
+.rodape-coluna-informacoes li { 
   margin-bottom: 10px;
 }
 
@@ -78,10 +78,31 @@
   color: var(--cor-10);
   text-decoration: none;
   font-size: 16px;
+  
 }
 
-.rodape-coluna-informacoes li a:hover {
-  text-decoration: underline;
+.rodape-coluna-informacoes a {
+display: inline-block;
+  position: relative;
+}
+
+.rodape-coluna-informacoes a:hover::after {
+  width: 100%;
+}
+.rodape-coluna-informacoes a::after {
+  left: 0;
+}
+
+
+.rodape-coluna-informacoes a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: var(--cor-p3);
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
 }
 
 .rodape-copyright {
@@ -103,10 +124,11 @@
     grid-template-columns: 1fr; 
     gap: 30px;
     text-align: center;
+    justify-content: center;
   }
 
   .rodape-coluna-logo {
-    text-align: center;
+    margin: auto;
   }
 
   .rodape-social {

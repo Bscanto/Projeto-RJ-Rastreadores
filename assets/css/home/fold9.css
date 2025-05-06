@@ -1,5 +1,6 @@
 .fold9 {
-  background: var(--cor-p3) url('../../images/FUNDO.png') no-repeat center center;
+  background: var(--cor-p3) url("../../images/FUNDO.png") no-repeat center
+    center;
   background-size: cover;
   padding: 60px 20px;
   color: var(--cor-0);
@@ -15,10 +16,9 @@
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 3rem;
-  color: var(--cor-0); 
+  color: var(--cor-0);
   text-align: center;
 }
-
 
 .fold9-content p {
   max-width: 900px;
@@ -28,9 +28,6 @@
   line-height: 32px;
   margin-bottom: 40px;
 }
-
-
-
 
 .contato-wrapper {
   margin-top: 80px;
@@ -42,7 +39,7 @@
   width: 400px;
   background-color: var(--cor-9);
   padding: 40px;
-  border-radius: 10px 0 0 10px ;
+  border-radius: 10px 0 0 10px;
   text-align: left;
 }
 
@@ -82,7 +79,7 @@
 }
 
 .social-icons {
- margin: 0  auto;
+  margin: 0 auto;
   margin-top: 100px;
 }
 
@@ -113,7 +110,7 @@
 
 .contato-form {
   width: 600px;
-  background-color: var(--cor-0); 
+  background-color: var(--cor-0);
   padding: 40px;
   border-radius: 0 10px 10px 0;
   color: var(--cor-7);
@@ -176,37 +173,348 @@
   margin-right: 8px;
 }
 
-
-
 .submit-button:hover {
   background-color: var(--cor-azul-destaque-hover); /* Cor do botão no hover */
 }
 
-
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .contato h2 {
-    font-size: 32px;
+@media (max-width: 1200px) {
+  .fold9-content h1 {
+    font-size: 56px;
+    margin-bottom: 2.5rem;
   }
 
-  .contato-description {
-    font-size: 16px;
+  .fold9-content p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 30px;
   }
 
   .contato-wrapper {
-    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    margin-top: 60px;
   }
 
-  .contato-info,
-  .contato-form {
+  .contato-info {
+    width: 350px;
     padding: 30px;
+  }
+
+  .contato-info h3 {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+
+  .contato-form {
+    width: 550px;
+    padding: 30px;
+  }
+
+  .contato-form h3 {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .fold9-content h1 {
+    font-size: 48px;
+    margin-bottom: 2rem;
+  }
+
+  .fold9-content p {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 25px;
+  }
+
+  .contato-wrapper {
+    margin-top: 50px;
+  }
+
+  .contato-info {
+    width: 300px;
+    padding: 25px;
+  }
+
+  .contato-info h3 {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  .contato-form {
+    width: 500px;
+    padding: 25px;
+  }
+
+  .contato-form h3 {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 960px) {
+  .fold9-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .fold9-content h1 {
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+  }
+
+  .fold9-content p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .contato-wrapper {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .contato-info {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .contato-form {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
   }
 
   .contato-info h3,
   .contato-form h3 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 860px) {
+  .fold9-content {
+    max-width: 600px;
+  }
+
+  .fold9-content h1 {
+    font-size: 36px;
+    margin-bottom: 1.2rem;
+  }
+
+  .fold9-content p {
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 18px;
+  }
+
+  .contato-wrapper {
+    margin-top: 35px;
+  }
+
+  .contato-info {
+    padding: 22px;
+  }
+
+  .contato-info h3 {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+  }
+
+  .contato-form {
+    padding: 22px;
+  }
+
+  .contato-form h3 {
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
+
+  .info-item img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+  }
+
+  .info-item p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .form-group label {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 11px;
+    font-size: 15px;
+  }
+
+  .radio-options label {
+    font-size: 15px;
+  }
+
+  .social-icons {
+    margin-top: 60px;
+  }
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .submit-button {
+    padding: 14px 28px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .fold9-content {
+    max-width: 95%; /* Permitir mais largura em telas pequenas */
+  }
+
+  .fold9-content h1 {
+    font-size: 28px; /* Reduzir ainda mais o título */
+    margin-bottom: 1rem;
+  }
+
+  .fold9-content p {
+    font-size: 14px;
+    line-height: 20px; /* Ajustar a altura da linha */
+    margin-bottom: 20px; /* Aumentar um pouco a margem inferior */
+  }
+
+  .contato-wrapper {
+    margin-top: 25px; /* Reduzir a margem superior */
+  }
+
+  .contato-info,
+  .contato-form {
+    padding: 15px; /* Reduzir o preenchimento */
+  }
+
+  .contato-info h3,
+  .contato-form h3 {
+    font-size: 20px; /* Manter o tamanho do título do formulário e info */
+    margin-bottom: 25px;
+  }
+
+  .info-item {
+    flex-direction: column; /* Empilhar ícone e texto */
+    align-items: flex-start; /* Alinhar à esquerda */
+    margin-bottom: 15px; /* Aumentar a margem inferior */
+  }
+
+  .info-item img {
+    margin-right: 0; /* Remover margem direita */
+    margin-bottom: 5px; /* Adicionar margem abaixo do ícone */
+    width: 20px;
+    height: 20px;
+  }
+
+  .info-item p,
+  .info-item a {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .form-row {
+    flex-direction: column; /* Garantir que os campos fiquem em coluna */
+    gap: 10px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="tel"],
+  .form-group input[type="email"],
+  .form-group input[type="number"],
+  .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .radio-options {
+    flex-direction: column; /* Empilhar as opções de rádio */
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .radio-options label {
+    font-size: 14px;
+  }
+
+  .submit-button {
+    padding: 10px 20px; /* Reduzir o preenchimento do botão */
+    font-size: 15px;
+  }
+
+  .social-icons {
+    margin-top: 40px; /* Reduzir a margem superior */
+    display: flex; /* Manter os ícones em linha */
+    justify-content: center; /* Centralizar os ícones */
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .fold9-content {
+    max-width: 400px;
+  }
+
+  .fold9-content h1 {
+    font-size: 28px;
+  }
+
+  .contato-info h3,
+  .contato-form h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .info-item p {
+    font-size: 14px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .radio-options label {
+    font-size: 14px;
+  }
+
+  .submit-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .fold9-content {
+    max-width: 250;
+  }
+  .fold9-content h1 {
+    font-size: 24px;
   }
 
   .social-icons a {
@@ -217,10 +525,27 @@
     width: 25px;
     height: 25px;
   }
+}
 
-  .radio-options {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+@media (max-width: 300px) {
+  .fold9-content h1 {
+    font-size: 20px;
+  }
+
+  .contato-info h3,
+  .contato-form h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .info-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
   }
 }

@@ -1,0 +1,76 @@
+.fade-in-onload {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.loaded {
+  opacity: 1;
+}
+
+.slide-in-scroll {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-item {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.feature-item.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fold4-lista li img {
+  transform: scale(0.8);
+  opacity: 0.6;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.fold4-lista li.animated img {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+.fold5-list li {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fold5-list li.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fold7-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fold7-card.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.plataforma-agro-card {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.plataforma-agro-card.animated {
+  opacity: 1;
+  transform: scale(1);
+}
+

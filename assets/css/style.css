@@ -4,6 +4,7 @@
 @import "./global/footer.css";
 
 /* Utilidades */
+@import "./utilidades/anima.css";
 @import "./utilidades/componentes.css";
 @import "./utilidades/formulario.css";
 @import "./utilidades/cores.css";

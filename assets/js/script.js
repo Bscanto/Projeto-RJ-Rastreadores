@@ -129,3 +129,116 @@
 
   
 
+  // Animações
+  document.addEventListener('DOMContentLoaded', () => {
+    const elementsToFadeIn = document.querySelectorAll('.hero-content-text, #fold2-content, .fold3-content, .fold4-content, .fold5-content, .fold6-content, .fold7-content, .plataforma-agro-content, .fold9-content, .rodape-content');
+    elementsToFadeIn.forEach(element => {
+        element.classList.add('fade-in-onload');
+        setTimeout(() => {
+            element.classList.add('loaded');
+        }, 100); // Pequeno delay para garantir a transição
+    });
+});
+
+const sectionsToSlideIn = document.querySelectorAll('#fold2, #fold3, #fold4, #fold5, #fold6, #fold7, #plataforma-agro, #fold9');
+
+const observerSlide = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in-visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2 }); // A animação começa quando 20% da seção está visível
+
+sectionsToSlideIn.forEach(section => {
+    section.classList.add('slide-in-scroll');
+    observerSlide.observe(section);
+});
+
+
+const featureItems = document.querySelectorAll('#fold3 .feature-item');
+
+const observerFeatures = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('animated');
+            }, index * 150); // Anima cada item com um pequeno delay
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+featureItems.forEach(item => {
+    observerFeatures.observe(item);
+});
+
+const featureIcons = document.querySelectorAll('#fold4 .fold4-lista li');
+
+const observerIcons = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('animated');
+            }, index * 100);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.6 });
+
+featureIcons.forEach(icon => {
+    observerIcons.observe(icon);
+});
+
+const benefitItems = document.querySelectorAll('#fold5 .fold5-list li');
+
+const observerBenefits = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('animated');
+            }, index * 150);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+benefitItems.forEach(item => {
+    observerBenefits.observe(item);
+});
+
+const valueCards = document.querySelectorAll('#fold7 .fold7-card');
+
+const observerValue = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('animated');
+            }, index * 200);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.4 });
+
+valueCards.forEach(card => {
+    observerValue.observe(card);
+});
+
+const agroCards = document.querySelectorAll('#plataforma-agro .plataforma-agro-card');
+
+const observerAgro = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('animated');
+            }, index * 150);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+agroCards.forEach(card => {
+    observerAgro.observe(card);
+});
+

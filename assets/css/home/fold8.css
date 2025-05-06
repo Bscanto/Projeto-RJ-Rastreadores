@@ -1,0 +1,97 @@
+.plataforma-agro {
+  background-image: url('../../images/fundo-trator.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.plataforma-agro-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plataforma-agro h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: var(--cor-10); 
+  text-align: center;
+}
+
+.plataforma-agro-description {
+  font-size: 18px;
+  color: var(--cor-texto-secundario); /* Cor da descrição */
+  margin-bottom: 40px;
+}
+
+.plataforma-agro-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.plataforma-agro-card {
+  background-color: var(--cor-0); 
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+}
+
+.plataforma-agro-card img {
+  margin: auto;
+  width: 50px; 
+  height: 50px;
+  margin-bottom: 15px;
+  
+}
+
+.plataforma-agro-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cor-9);
+  margin-bottom: 10px;
+}
+
+.plataforma-agro-card p {
+  font-size: 16px;
+  color: var(--cor-7);
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .plataforma-agro h2 {
+    font-size: 32px;
+  }
+
+  .plataforma-agro-description {
+    font-size: 16px;
+  }
+
+  .plataforma-agro-cards {
+    grid-template-columns: 1fr; 
+  }
+
+  .plataforma-agro-card {
+    padding: 20px;
+  }
+
+  .plataforma-agro-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .plataforma-agro-card h3 {
+    font-size: 18px;
+  }
+
+  .plataforma-agro-card p {
+    font-size: 15px;
+  }
+}
+
+

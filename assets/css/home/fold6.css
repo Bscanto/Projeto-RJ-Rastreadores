@@ -1,0 +1,256 @@
+.fold6 {
+  background: var(--cor-4) url('../../images/mapa\ brasil.png') no-repeat center;
+  background-size: contain;
+  padding: 60px 20px;
+}
+
+.fold6-content-group1,
+.fold6-content-group2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fold6-content-group2 {
+  margin: 80px auto;
+}
+
+.fold6-content-group1-img,
+.fold6-content-group2-img {
+  width: 600px;
+  height: 400px;
+}
+
+.fold6-content h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: var(--cor-9); 
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background: var(--cor-1);
+  border-radius: 10px;
+ }
+
+.fold6-content-cards {
+align-items: center;
+text-align: center;
+}
+
+ .fold6-content-cards h1{
+  margin: 60px auto;
+  font-size: 24px;
+  color: var(--cor-9); 
+ }
+
+ .fold6-content-cards p{
+  font-size: 16px;
+  color: var(--cor-9); 
+ }
+
+
+
+
+ #slids {
+  overflow: hidden;
+  position: relative; /* Necessário para posicionamento absoluto dos filhos */
+  width: 100%;
+  height: 100%;
+}
+
+.fold6-content-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none; /* impede clique em cards invisíveis */
+}
+
+.fold6-content-cards.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+ 
+
+ .next {
+  background-image: url('../../images/icones/chevron-right.svg');
+  display:block;
+  position: absolute;
+  top: 35%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+ }
+
+ .prev {
+  background-image: url('../../images/icones/chevron-left.svg');
+  display:block;
+  position: absolute;
+  top: 35%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+ }
+
+ 
+ .prev {
+  left: -100px;
+ }
+ .next {
+  right: -100px;
+ }
+
+ .next2 {
+  background-image: url('../../images/icones/chevron-right.svg');
+  display:block;
+  position: absolute;
+  top: 35%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+ }
+
+ .prev2 {
+  background-image: url('../../images/icones/chevron-left.svg');
+  display:block;
+  position: absolute;
+  top: 35%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+ }
+
+ 
+ .prev2 {
+  left: -100px;
+ }
+ .next2 {
+  right: -100px;
+ }
+
+
+
+
+/* Media Queries para Responsividade */
+
+/* Para telas com largura máxima de 1200px */
+@media (max-width: 1200px) {
+  .fold6-content-group1-img,
+  .fold6-content-group2-img {
+    width: 500px;
+    height: 333px;
+  }
+
+  .fold6-content h1 {
+    font-size:24px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Para telas com largura máxima de 900px */
+@media (max-width: 900px) {
+  .fold6-content-group1,
+  .fold6-content-group2 {
+    flex-direction: column; /* Empilha imagem e slider */
+    gap: 30px;
+  }
+
+  .fold6-content-group1-img,
+  .fold6-content-group2-img {
+    width: 400px;
+    height: 267px;
+  }
+
+  .fold6-content h1 {
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+
+  .fold6-content p {
+    font-size: 14px;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Para telas com largura máxima de 800px */
+@media (max-width: 800px) {
+  .fold6 {
+    padding: 40px 15px;
+    background-position: top center; /* Ajusta a posição do background */
+  }
+
+  .fold6-content h1 {
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Para telas com largura máxima de 700px */
+@media (max-width: 700px) {
+  .fold6-content-group1-img,
+  .fold6-content-group2-img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .slider {
+    width: 250px;
+    height: 250px;
+  }
+
+  .fold6-content-cards h1 {
+    font-size: 20px;
+    margin: 40px auto;
+  }
+
+  .fold6-content-cards p {
+    font-size: 14px;
+  }
+}
+
+/* Para telas com largura máxima de 400px */
+@media (max-width: 400px) {
+  .fold6 {
+    padding: 30px 10px;
+  }
+
+  .fold6-content h1 {
+    font-size: 32px;
+    margin-bottom: 1rem;
+  }
+
+  .fold6-content-group1-img,
+  .fold6-content-group2-img {
+    width: 250px;
+    height: 167px;
+  }
+
+  .slider {
+    width: 200px;
+    height: 200px;
+  }
+
+  .fold6-content-cards h1 {
+    font-size: 18px;
+    margin: 30px auto;
+  }
+
+  .next,
+  .prev {
+    width: 30px;
+    height: 30px;
+  }
+}

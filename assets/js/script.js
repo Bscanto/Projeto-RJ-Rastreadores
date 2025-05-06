@@ -54,4 +54,78 @@
   });
 
 
+  // const cards = document.querySelectorAll('.fold6-content-cards');
+  // const prev = document.querySelector('.prev');
+  // const next = document.querySelector('.next');
+  // let current = 0;
+  
+  // function showCard(index) {
+  //   cards.forEach((card, i) => {
+  //     card.classList.toggle('active', i === index);
+  //   });
+  // }
+  
+  // prev.addEventListener('click', () => {
+  //   current = (current - 1 + cards.length) % cards.length;
+  //   showCard(current);
+  // });
+  
+  // next.addEventListener('click', () => {
+  //   current = (current + 1) % cards.length;
+  //   showCard(current);
+  // });
+  
+  // showCard(current);
+
+
+  
+  const cards1 = document.querySelectorAll('#slids .fold6-content-cards');
+  const next1 = document.querySelector('.next');
+  const prev1 = document.querySelector('.prev');
+  let current1 = 0;
+
+  function showCard1(index) {
+    cards1.forEach((card, i) => {
+      card.classList.toggle('active', i === index);
+    });
+  }
+
+  next1.addEventListener('click', () => {
+    current1 = (current1 + 1) % cards1.length;
+    showCard1(current1);
+  });
+
+  prev1.addEventListener('click', () => {
+    current1 = (current1 - 1 + cards1.length) % cards1.length;
+    showCard1(current1);
+  });
+
+  showCard1(current1);
+
+ 
+  const cards2 = document.querySelectorAll('#slids2 .fold6-content-cards');
+  const next2 = document.querySelector('.next2');
+  const prev2 = document.querySelector('.prev2');
+  let current2 = 0;
+
+  function showCard2(index) {
+    cards2.forEach((card, i) => {
+      card.classList.toggle('active', i === index);
+    });
+  }
+
+  next2.addEventListener('click', () => {
+    current2 = (current2 + 1) % cards2.length;
+    showCard2(current2);
+  });
+
+  prev2.addEventListener('click', () => {
+    current2 = (current2 - 1 + cards2.length) % cards2.length;
+    showCard2(current2);
+  });
+
+  showCard2(current2);
+
+
+  
 

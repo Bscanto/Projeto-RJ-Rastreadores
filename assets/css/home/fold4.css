@@ -1,0 +1,161 @@
+.fold4 {
+  margin-top: 80px;
+  padding: 5rem 2rem;
+  background-color: var(--cor-4);
+  background-image: url('../../images/Group12.png');
+  background-size: contain; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+#fold4 h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: var(--cor-p3); 
+  text-align: center;
+}
+
+.fold4-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.fold4-lista li {
+  background-color: white;
+  color: var(--cor-9);
+  width: 800px;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+.fold4-lista li:hover {
+  background-color: #f3f4f6; /* Cor de fundo quando o hover é ativado */
+  box-shadow: 0 8px 80px rgba(0, 0, 0, 0.2); /* Efeito de sombra mais forte */
+  transform: translateY(-5px); /* Levanta o item um pouco para dar um efeito de profundidade */
+}
+
+.fold4-lista li:hover i {
+  color: #0ea5e9; /* Cor dos ícones no hover */
+}
+
+.fold4-lista li:hover span {
+  color: #1f2937; /* Altere a cor do texto para um tom mais escuro no hover */
+}
+
+
+.fold4-lista li img {
+  font-size: 1.5rem;
+  color: #0ea5e9; /* Cor dos ícones */
+}
+
+.fold4-lista li span {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Responsividade para telas maiores que 1200px */
+@media (max-width: 1200px) {
+  .fold4 {
+    padding: 4rem 1.5rem; /* Reduzir o padding */
+  }
+
+  .fold4-lista li {
+    width: 700px; /* Ajuste de largura para telas médias */
+  }
+
+  #fold4 h1 {
+    font-size: 56px; /* Reduzir o tamanho da fonte */
+  }
+}
+
+/* Responsividade para telas menores que 900px */
+@media (max-width: 900px) {
+  .fold4 {
+    padding: 3rem 1.5rem; /* Menor padding */
+  }
+
+  .fold4-lista li {
+    width: 100%; /* Ocupa toda a largura da tela */
+    padding: 1rem; /* Ajusta o padding para telas menores */
+  }
+
+  #fold4 h1 {
+    font-size: 48px; /* Tamanho da fonte menor para caber melhor */
+  }
+
+  .fold4-lista li {
+    width: 600px;
+    margin: 10px auto;
+  }
+  .fold4-lista li span {
+    font-size: 0.9rem; /* Ajusta o tamanho do texto */
+  }
+
+  .fold4-lista li img {
+    font-size: 1.25rem; /* Ícones menores para telas médias */
+  }
+}
+
+/* Responsividade para telas menores que 700px */
+@media (max-width: 740px) {
+  .fold4 {
+    padding: 2.5rem 1rem; /* Menor padding */
+  }
+
+  .fold4-lista li {
+    max-width: 320px;
+    width: 100%; /* Mantém a largura ocupando toda a tela */
+    padding: 0.75rem; /* Diminui o padding */
+  }
+
+  #fold4 h1 {
+    font-size: 40px; /* Fonte bem menor para telas pequenas */
+  }
+
+  .fold4-lista li img {
+    font-size: 1rem; /* Ícones ainda menores */
+  }
+
+  .fold4-lista li span {
+    font-size: 0.85rem; /* Texto ainda menor */
+  }
+}
+
+/* Responsividade para telas menores que 400px */
+@media (max-width: 400px) {
+  .fold4 {
+    padding: 2rem 0.5rem; /* Reduzindo o padding */
+  }
+
+  #fold4 h1 {
+    font-size: 32px; /* Fonte pequena para telas muito pequenas */
+  }
+
+  .fold4-lista li {
+    padding: 0.5rem; /* Ajusta o padding */
+    font-size: 0.9rem; /* Fonte menor em geral */
+  }
+
+  .fold4-lista li img {
+    font-size: 1rem; /* Ícones pequenos */
+  }
+
+  .fold4-lista li span {
+    font-size: 0.8rem; /* Texto bem pequeno para telas pequenas */
+  }
+
+  /* Ajuste de margem na lista para evitar muito espaço */
+  .fold4-lista li:last-child {
+    margin-bottom: 0;
+  }
+}

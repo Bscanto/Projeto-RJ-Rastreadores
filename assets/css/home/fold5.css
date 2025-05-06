@@ -1,0 +1,73 @@
+/* Fold 5 - Benefícios */
+.fold5 {
+  background: #2386d9 url('../../images/FUNDO.png') no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.fold5-content.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fold5-content h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: var(--cor-0); 
+  text-align: center;
+}
+
+.fold5-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.fold5-list li {
+  background-color: #f2f2f2;
+  color: #000;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.fold5-list h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.fold5-list h2 span {
+  color: #2386d9;
+  font-weight: 700;
+}
+
+.fold5-list p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .fold5-content h1 {
+    font-size: 2rem;
+  }
+
+  .fold5-list li {
+    padding: 20px;
+  }
+
+  .fold5-list h2 {
+    font-size: 1rem;
+  }
+
+  .fold5-list p {
+    font-size: 0.95rem;
+  }
+}

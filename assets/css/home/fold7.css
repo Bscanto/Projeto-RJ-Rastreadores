@@ -1,14 +1,14 @@
-.valor-agregado {
+.fold7 {
   padding: 80px 20px;
   text-align: center;
 }
 
-.valor-agregado-content {
+.fold7-content {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.valor-agregado h2 {
+.fold7 h2 {
   font-size: 64px;
   font-weight: 600;
   margin-bottom: 3rem;
@@ -16,13 +16,13 @@
   text-align: center;
 }
 
-.valor-agregado-cards {
+.fold7-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
 }
 
-.valor-agregado-card {
+.fold7-card {
   background-color: var(--cor-1);
   border-radius: 10px;
   padding: 30px;
@@ -31,19 +31,19 @@
   border: 2px solid var(--cor-4);
 }
 
-.valor-agregado-card h3 {
+.fold7-card h3 {
   font-size: 24px;
   font-weight: 500;
   color: var(--cor-9);
   margin-bottom: 20px;
 }
 
-.valor-agregado-card ul {
+.fold7-card ul {
   list-style: none;
   padding: 0;
 }
 
-.valor-agregado-card li {
+.fold7-card li {
   position: relative;
   padding-left: 25px;
   margin-bottom: 10px;
@@ -51,7 +51,7 @@
   font-size: 16px;
 }
 
-.valor-agregado-card li::before {
+.fold7-card li::before {
   content: '';
   position: absolute;
   left: 0;
@@ -64,25 +64,25 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .valor-agregado h2 {
+  .fold7 h2 {
     font-size: 32px;
     margin-bottom: 30px;
   }
 
-  .valor-agregado-cards {
+  .fold7-cards {
     grid-template-columns: 1fr;
   }
 
-  .valor-agregado-card {
+  .fold7-card {
     padding: 20px;
   }
 
-  .valor-agregado-card h3 {
+  .fold7-card h3 {
     font-size: 22px;
     margin-bottom: 15px;
   }
 
-  .valor-agregado-card li {
+  .fold7-card li {
     font-size: 15px;
     margin-bottom: 8px;
   }

@@ -5,7 +5,7 @@
   color: var(--cor-0);
 }
 
-.fold9-content.container {
+.fold9-content .container {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -39,6 +39,7 @@
 }
 
 .contato-info {
+  width: 400px;
   background-color: var(--cor-9);
   padding: 40px;
   border-radius: 10px 0 0 10px ;
@@ -71,6 +72,7 @@
 }
 
 .info-item a {
+  margin: auto;
   color: var(--cor-0);
   text-decoration: none;
 }
@@ -100,7 +102,17 @@
   opacity: 1;
 }
 
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
 .contato-form {
+  width: 600px;
   background-color: var(--cor-0); 
   padding: 40px;
   border-radius: 0 10px 10px 0;

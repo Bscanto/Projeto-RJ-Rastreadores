@@ -1,255 +1,325 @@
 .fold6 {
-  background: var(--cor-4) url('../../images/mapa\ brasil.png') no-repeat center;
+  background-image: url('../../images/mapa-brasil.png');
+  background-repeat: no-repeat;
   background-size: contain;
-  padding: 60px 20px;
-}
-
-.fold6-content-group1,
-.fold6-content-group2 {
+  background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  padding: 40px;
+  background-color: var(--cor-4);
 }
 
-.fold6-content-group2 {
-  margin: 80px auto;
-}
-
-.fold6-content-group1-img,
-.fold6-content-group2-img {
-  width: 600px;
-  height: 400px;
-}
-
-.fold6-content h1 {
+.fold6 h2 {
   font-size: 64px;
   font-weight: 600;
   margin-bottom: 3rem;
-  color: var(--cor-9); 
+  color: var(--cor-9);
   text-align: center;
+  text-transform: uppercase;
 }
 
-.slider {
+.cards-container {
+  display: flex;
   position: relative;
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
-  background: var(--cor-1);
-  border-radius: 10px;
- }
-
-.fold6-content-cards {
-align-items: center;
-text-align: center;
-}
-
- .fold6-content-cards h1{
-  margin: 60px auto;
-  font-size: 24px;
-  color: var(--cor-9); 
- }
-
- .fold6-content-cards p{
-  font-size: 16px;
-  color: var(--cor-9); 
- }
-
-
-
-
- #slids {
+  width: 80%;
+  max-width: 1200px;
   overflow: hidden;
-  position: relative; /* Necessário para posicionamento absoluto dos filhos */
-  width: 100%;
-  height: 100%;
 }
 
-.fold6-content-cards {
+.card {
+  flex: 0 0 100%;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  pointer-events: none; /* impede clique em cards invisíveis */
 }
 
-.fold6-content-cards.active {
+.card.active {
   opacity: 1;
-  pointer-events: auto;
+  transform: translateX(0);
+  position: relative;
 }
- 
 
- .next {
+.card:not(.active) {
+  transform: translateX(100%) scale(0.9); /* Cards não ativos deslizam para a direita e diminuem */
+}
+
+.card.prev {
+  transform: translateX(-100%) scale(0.9); /* Card anterior desliza para a esquerda */
+}
+
+.img-container {
+  flex-shrink: 0;
+  width: 60%; /* Ajuste a largura da imagem conforme necessário */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: 40px;
+}
+
+.text-cont {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-cont h3 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #333;
+}
+
+.text-cont p {
+  color: var(--cor-10);
+  line-height: 1.6;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.prev-button,
+.next-button {
   background-image: url('../../images/icones/chevron-right.svg');
-  display:block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 35%;
+  top: 50%;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
- }
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color: transparent;
+  z-index: 10;
+}
 
- .prev {
-  background-image: url('../../images/icones/chevron-left.svg');
-  display:block;
-  position: absolute;
-  top: 35%;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
- }
+.prev-button:hover,
+.next-button:hover {
+  opacity: 1;
+}
 
- 
- .prev {
-  left: -100px;
- }
- .next {
-  right: -100px;
- }
+.prev-button {
+  left: 10px;
+  background-image: url('../../images/icones/chevron-left.svg'); /* Usar ícone da esquerda */
+}
 
- .next2 {
-  background-image: url('../../images/icones/chevron-right.svg');
-  display:block;
-  position: absolute;
-  top: 35%;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
- }
+.next-button {
+  right: 10px; /* Ajustar a distância da borda direita */
+}
 
- .prev2 {
-  background-image: url('../../images/icones/chevron-left.svg');
-  display:block;
-  position: absolute;
-  top: 35%;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
- }
-
- 
- .prev2 {
-  left: -100px;
- }
- .next2 {
-  right: -100px;
- }
-
-
-
-
-/* Media Queries para Responsividade */
+/* Breakpoints de responsividade */
 
 /* Para telas com largura máxima de 1200px */
 @media (max-width: 1200px) {
-  .fold6-content-group1-img,
-  .fold6-content-group2-img {
-    width: 500px;
-    height: 333px;
+  .fold6 h2 {
+    font-size: 56px;
+    margin-bottom: 2.5rem;
   }
 
-  .fold6-content h1 {
-    font-size:24px;
-    margin-bottom: 2.5rem;
+  .cards-container {
+    width: 90%;
+  }
+
+  .img-container {
+    width: 50%;
+  }
+
+  .img-container img {
+    margin-left: 20px;
+  }
+
+  .text-cont h3 {
+    font-size: 22px;
+  }
+
+  .text-cont p {
+    width: 180px;
+    margin-top: 15px;
+  }
+
+  .prev-button {
+    left: 5px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .next-button {
+    right: 5px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Para telas com largura máxima de 1000px */
+@media (max-width: 1000px) {
+  .fold6 h2 {
+    font-size: 48px;
+    margin-bottom: 2rem;
+  }
+
+  .cards-container {
+    width: 95%;
+  }
+
+  .img-container {
+    width: 45%;
+  }
+
+  .text-cont h3 {
+    font-size: 20px;
+  }
+
+  .text-cont p {
+    width: 160px;
+  }
+
+  .prev-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .next-button {
+    width: 40px;
+    height: 40px;
   }
 }
 
 /* Para telas com largura máxima de 900px */
 @media (max-width: 900px) {
-  .fold6-content-group1,
-  .fold6-content-group2 {
-    flex-direction: column; /* Empilha imagem e slider */
-    gap: 30px;
+  .fold6 h2 {
+    font-size: 44px;
   }
 
-  .fold6-content-group1-img,
-  .fold6-content-group2-img {
-    width: 400px;
-    height: 267px;
+  .card {
+    gap: 15px;
+    padding: 15px;
   }
 
-  .fold6-content h1 {
+  .img-container {
+    width: 40%;
+  }
+
+  .text-cont h3 {
     font-size: 18px;
-    margin-bottom: 2rem;
   }
 
-  .fold6-content p {
-    font-size: 14px;
-    margin-bottom: 2rem;
+  .text-cont p {
+    width: 140px;
+    font-size: 0.9em;
   }
 }
 
 /* Para telas com largura máxima de 800px */
 @media (max-width: 800px) {
-  .fold6 {
-    padding: 40px 15px;
-    background-position: top center; /* Ajusta a posição do background */
+  .fold6 h2 {
+    font-size: 40px;
   }
 
-  .fold6-content h1 {
-    font-size: 40px;
-    margin-bottom: 1.5rem;
+  .img-container {
+    width: 50%;
+  }
+
+  .text-cont p {
+    width: 100%;
   }
 }
 
 /* Para telas com largura máxima de 700px */
 @media (max-width: 700px) {
-  .fold6-content-group1-img,
-  .fold6-content-group2-img {
-    width: 300px;
-    height: 200px;
+  .fold6 h2 {
+    font-size: 36px;
+    margin-bottom: 1.5rem;
   }
 
-  .slider {
-    width: 250px;
-    height: 250px;
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .fold6-content-cards h1 {
-    font-size: 20px;
-    margin: 40px auto;
+  .img-container {
+    width: 80%;
+    margin-left: 0;
+    margin-bottom: 15px;
   }
 
-  .fold6-content-cards p {
-    font-size: 14px;
+  .text-cont {
+    align-items: center;
+  }
+
+  .text-cont p {
+    width: 80%;
+    text-align: center;
+  }
+
+  .prev-button,
+  .next-button {
+    top: auto;
+    bottom: 10px;
+    transform: none;
+  }
+
+  .prev-button {
+    left: 20px;
+  }
+
+  .next-button {
+    right: 20px;
+  }
+
+  .cards-container {
+    padding-bottom: 80px; /* Espaço para os botões não sobreporem o conteúdo */
+  }
+}
+
+/* Para telas com largura máxima de 600px */
+@media (max-width: 600px) {
+  .fold6 h2 {
+    font-size: 32px;
+  }
+
+  .prev-button,
+  .next-button {
+    width: 40px;
+    height: 40px;
   }
 }
 
 /* Para telas com largura máxima de 400px */
 @media (max-width: 400px) {
-  .fold6 {
-    padding: 30px 10px;
-  }
-
-  .fold6-content h1 {
-    font-size: 32px;
+  .fold6 h2 {
+    font-size: 28px;
     margin-bottom: 1rem;
   }
 
-  .fold6-content-group1-img,
-  .fold6-content-group2-img {
-    width: 250px;
-    height: 167px;
+  .card {
+    padding: 10px;
   }
 
-  .slider {
-    width: 200px;
-    height: 200px;
+  .text-cont h3 {
+    font-size: 1.1em;
   }
 
-  .fold6-content-cards h1 {
-    font-size: 18px;
-    margin: 30px auto;
+  .text-cont p {
+    font-size: 0.9em;
+    width: 90%;
   }
 
-  .next,
-  .prev {
+  .prev-button,
+  .next-button {
     width: 30px;
     height: 30px;
   }

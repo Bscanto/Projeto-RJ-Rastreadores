@@ -9,7 +9,6 @@
 
   // Soluções completas abrir cards 
 
- 
   document.addEventListener('DOMContentLoaded', function() {
     const expandButtons = document.querySelectorAll('.expand-button');
     const featureList = document.querySelector('.features-list');
@@ -78,55 +77,39 @@
   // showCard(current);
 
 
-  
-  const cards1 = document.querySelectorAll('#slids .fold6-content-cards');
-  const next1 = document.querySelector('.next');
-  const prev1 = document.querySelector('.prev');
-  let current1 = 0;
+  // FUNCIONALIDADES
+const cardsContainer = document.querySelector('.cards-container');
+const cards = document.querySelectorAll('.card');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+let currentIndex = 0;
 
-  function showCard1(index) {
-    cards1.forEach((card, i) => {
-      card.classList.toggle('active', i === index);
-    });
-  }
-
-  next1.addEventListener('click', () => {
-    current1 = (current1 + 1) % cards1.length;
-    showCard1(current1);
+function updateCards() {
+  cards.forEach((card, index) => {
+    card.classList.remove('active', 'prev');
+    if (index === currentIndex) {
+      card.classList.add('active');
+    } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
+      card.classList.add('prev');
+    }
   });
+}
 
-  prev1.addEventListener('click', () => {
-    current1 = (current1 - 1 + cards1.length) % cards1.length;
-    showCard1(current1);
-  });
+function nextCard() {
+  currentIndex = (currentIndex + 1) % cards.length;
+  updateCards();
+}
 
-  showCard1(current1);
+function prevCard() {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  updateCards();
+}
 
- 
-  const cards2 = document.querySelectorAll('#slids2 .fold6-content-cards');
-  const next2 = document.querySelector('.next2');
-  const prev2 = document.querySelector('.prev2');
-  let current2 = 0;
+nextButton.addEventListener('click', nextCard);
+prevButton.addEventListener('click', prevCard);
 
-  function showCard2(index) {
-    cards2.forEach((card, i) => {
-      card.classList.toggle('active', i === index);
-    });
-  }
-
-  next2.addEventListener('click', () => {
-    current2 = (current2 + 1) % cards2.length;
-    showCard2(current2);
-  });
-
-  prev2.addEventListener('click', () => {
-    current2 = (current2 - 1 + cards2.length) % cards2.length;
-    showCard2(current2);
-  });
-
-  showCard2(current2);
-
-
+// Exibir o primeiro card inicialmente
+updateCards();
   
 
   // Animações

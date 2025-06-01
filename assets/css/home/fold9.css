@@ -154,12 +154,15 @@
 }
 
 .radio-group {
+  max-width: 400px;
+  width: 100%;
   margin-bottom: 20px;
 }
 
 .radio-options {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap:10px 20px;
   align-items: center;
 }
 

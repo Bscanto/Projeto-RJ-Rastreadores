@@ -82,6 +82,7 @@
 }
 
 .text-cont p {
+  font-size: 18px;
   color: var(--cor-10);
   line-height: 1.6;
   width: 200px;

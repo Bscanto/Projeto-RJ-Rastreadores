@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $mensagem .= "Email: $email\n";
   $mensagem .= "Quantidade de veículos: $quantidade\n";
   $mensagem .= "Tipo de veículo: $veiculo\n";
-  $mensagem .= "Dúvidas: $duvidas\n";""
+  $mensagem .= "Dúvidas: $duvidas\n";
 
   $headers = "From: $email";
 
